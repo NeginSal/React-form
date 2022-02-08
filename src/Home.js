@@ -8,11 +8,17 @@ const Home = () => {
     const [address, setAddress] = useState('');
     const [gender, setGender] = useState('1');
 
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        const information = { firstName, lastName, Mobile, phone, address, gender };
+        console.log(information );
+    }
+
 
   return (
     <div className="create">
       <h1>this is form page</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input type="text" required value={firstName} onChange={(e) => setfirstName(e.target.value)}  placeholder="نام"></input>
         <input type="text" required value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="نام خانوادگی"></input>
         <input type="tel" required value={Mobile} onChange={(e) => setMobile (e.target.value)} placeholder="تلفن همراه"></input>
