@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+    const navigate = useNavigate();
+
     const [firstName, setfirstName]= useState('');
     const [lastName, setLastName] = useState('');
     const [Mobile, setMobile ]= useState('');
@@ -11,13 +14,24 @@ const Home = () => {
     const handleSubmit=(e)=>{
         e.preventDefault();
         const information = { firstName, lastName, Mobile, phone, address, gender };
-        console.log(information );
+        
+        
+        fetch('https://jsonplaceholder.typicode.com/users',{
+          method: 'POST',
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(information)
+        }).then(() => {
+          console.log('new information added');
+          navigate("/list");
+        })
+
     }
 
 
   return (
     <div className="create">
-      <h1>this is form page</h1>
+      <h6>ثبت نام</h6>
+      <p>.لطفا اطلاعات خود را وارد کنید</p>
       <form onSubmit={handleSubmit}>
         <input type="text" required value={firstName} onChange={(e) => setfirstName(e.target.value)}  placeholder="نام"></input>
         <input type="text" required value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="نام خانوادگی"></input>
