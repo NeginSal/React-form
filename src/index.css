@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
-/* base styles */
 * {
   margin: 0;
   font-family: "Quicksand";
@@ -35,23 +34,25 @@
   margin: 0 auto;
   text-align: center;
 }
-.create p{
+.create p {
   width: 100%;
   padding: 6px 10px;
   margin: 30px 0;
   border: 1px solid #ddd;
-  background-color:  #e0e0d1;
+  background-color: #e0e0d1;
   box-sizing: border-box;
   display: block;
   text-align: right;
   color: #8b8b7e;
   font-size: small;
 }
-.create h6{
+.create h6 {
   text-align: right;
   font-size: medium;
 }
-.create input, .create textarea, .create select {
+.create input,
+.create textarea,
+.create select {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
@@ -60,8 +61,8 @@
   display: block;
   text-align: right;
 }
-.create ::placeholder{
-  color:#0099e6;
+.create ::placeholder {
+  color: #0099e6;
 }
 .create button {
   width: 100%;
@@ -73,5 +74,47 @@
   cursor: pointer;
   text-align: center;
   display: block;
+}
+.form-details input {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  text-align: right;
+}
 
+.form-details button {
+  width: 100%;
+  background: #00b33c;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+}
+.form-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+  text-align: right;
+  background-color: #f2f2f2;
+}
+.form-preview:hover {
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+}
+.form-preview p {
+  padding: 6px 10px;
+  margin: 10px 0;
+  display: block;
+  text-align: right;
+  font-size: medium;
+  color: #006666;
+  margin-bottom: 8px;
+}
+.form-preview :link {
+  text-decoration: none;
 }
