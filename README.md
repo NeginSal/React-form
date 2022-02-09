@@ -12,7 +12,11 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### Using Json Server
-after run npm start open new terminal and type  `npx json-server --watch data/db.json --port 8000` .
+after run npm start open new terminal and type:
+
+`npx json-server --watch data/db.json --port 8000` .
+
+
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
